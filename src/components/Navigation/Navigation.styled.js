@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { css, styled } from 'styled-components';
+import { styled } from 'styled-components';
 
 export const Header = styled.header`
   padding: 15px 30px;
@@ -12,7 +12,7 @@ export const Header = styled.header`
 `;
 
 export const NavContainer = styled.nav`
-  width: ${({ isAuth }) => (isAuth ? 'auto' : '100%')};
+  width: ${({ $isAuth }) => ($isAuth ? 'auto' : '100%')};
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -5,7 +5,6 @@ import {
   Header,
   NavContainer,
   NavItem,
-  NavFlex,
   AuthContainer,
 } from './Navigation.styled';
 
@@ -13,7 +12,7 @@ const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <Header>
-      <NavContainer isAuth={isLoggedIn}>
+      <NavContainer $isAuth={isLoggedIn}>
         <NavItem to="/" end>
           Home
         </NavItem>
