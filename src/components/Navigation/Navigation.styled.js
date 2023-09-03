@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { styled } from 'styled-components';
+import { css, styled } from 'styled-components';
 
 export const Header = styled.header`
   padding: 15px 30px;
   display: flex;
+  justify-content: space-between;
   gap: 20px;
   background-image: linear-gradient(to left, #c8d3d5, #a0d0ca);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -11,7 +12,7 @@ export const Header = styled.header`
 `;
 
 export const NavContainer = styled.nav`
-  width: 100%;
+  width: ${({ isAuth }) => (isAuth ? 'auto' : '100%')};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,4 +43,3 @@ export const NavItem = styled(NavLink)`
     text-decoration: underline;
   }
 `;
-

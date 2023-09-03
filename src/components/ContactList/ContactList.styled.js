@@ -2,6 +2,8 @@ import { styled } from 'styled-components';
 
 export const List = styled.ul`
   margin-top: 16px;
+  padding: 0 20px;
+  width: 100%;
 `;
 
 export const Item = styled.li`

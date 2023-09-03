@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { Input, Label } from 'components/AuthForm/AuthForm.styled';
+import { Form, Input, Label } from 'components/AuthForm/AuthForm.styled';
 import { filterContacts } from 'redux/contacts/filterSlice';
 
 const Filter = () => {
@@ -10,15 +10,17 @@ const Filter = () => {
   };
 
   return (
-    <Label>
-      Find contacts by name
-      <Input
-        type="text"
-        name="filter"
-        placeholder="Enter contact name"
-        onChange={onFilter}
-      />
-    </Label>
+    <Form>
+      <Label>
+        Find contacts by name
+        <Input
+          type="text"
+          name="filter"
+          placeholder="Enter contact name"
+          onChange={onFilter}
+        />
+      </Label>
+    </Form>
   );
 };
 

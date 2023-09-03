@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 600px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   padding: 20px;
-  min-width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

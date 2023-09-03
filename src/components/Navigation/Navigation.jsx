@@ -1,13 +1,19 @@
 import UserMenu from 'components/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-import { Header, NavContainer, NavItem , AuthContainer} from './Navigation.styled';
+import {
+  Header,
+  NavContainer,
+  NavItem,
+  NavFlex,
+  AuthContainer,
+} from './Navigation.styled';
 
 const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <Header>
-      <NavContainer>
+      <NavContainer isAuth={isLoggedIn}>
         <NavItem to="/" end>
           Home
         </NavItem>
@@ -19,8 +25,8 @@ const Navigation = () => {
             <NavItem to="/login">Log In</NavItem>
           </AuthContainer>
         )}
-        {isLoggedIn && <UserMenu />}
       </NavContainer>
+      {isLoggedIn && <UserMenu />}
     </Header>
   );
 };
